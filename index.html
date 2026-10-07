@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Ruin Your Life with Style</title>
+    <style>
+      :root {
+        /* Balanced dark-grey background allowing the black cover to clearly detach and pop */
+        --bg-color: #2b2b30;
+        --bg-gradient: radial-gradient(circle at 50% 20%, #3a3a42 0%, #222226 80%);
+
+        --text-main: #f4f4f5;
+        --text-muted: #cbd5e1;
+        --text-eyebrow: #facc15; /* Energetic yellow */
+
+        --accent-red: #ef4444;   /* Bold crimson red */
+        --accent-red-hover: #dc2626;
+
+        --accent-yellow: #facc15;
+        --accent-yellow-hover: #eab308;
+
+        --amazon-yellow: #ff9900;
+        --amazon-yellow-hover: #e68a00;
+
+        --card-bg: #18181b;
+        --card-border: #3f3f46;
+
+        --btn-bg: #1c1c20;
+        --btn-text: #f4f4f5;
+        --btn-border: #4b4b55;
+        --btn-hover-border: #facc15;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: var(--bg-color);
+        background: var(--bg-gradient);
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+
+      header {
+        max-width: 680px;
+        margin-bottom: 2rem;
+      }
+
+      .eyebrow {
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent-yellow);
+        margin-bottom: 0.85rem;
+        text-shadow: 0 0 12px rgba(250, 204, 21, 0.25);
+      }
+
+      h1 {
+        font-size: 2.75rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+        line-height: 1.15;
+      }
+
+      p.subtitle {
+        font-size: 1.15rem;
+        color: #e4e4e7;
+        font-style: italic;
+        line-height: 1.5;
+        margin-top: 0.25rem;
+      }
+
+      p.author {
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent-red);
+        margin-top: 0.6rem;
+      }
+
+      .cover-container {
+        margin: 1.5rem 0 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cover-pad {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem;
+        background: linear-gradient(145deg, #1c1c20 0%, #0d0d0f 100%);
+        border: 1px solid #474752;
+        border-radius: 12px;
+        box-shadow: 
+          0 22px 50px rgba(0, 0, 0, 0.75),
+          inset 0 1px 0 rgba(255, 255, 255, 0.12),
+          0 0 35px rgba(239, 68, 68, 0.18);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+
+      .cover-pad:hover {
+        transform: translateY(-4px);
+        border-color: rgba(250, 204, 21, 0.6);
+        box-shadow: 
+          0 28px 60px rgba(0, 0, 0, 0.85),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          0 0 50px rgba(239, 68, 68, 0.35);
+      }
+
+      #book-link {
+        display: block;
+        text-decoration: none;
+        line-height: 0;
+      }
+
+      .book-cover {
+        max-width: 290px;
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 4px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .action-wrapper {
+        width: 100%;
+        max-width: 720px;
+        margin-bottom: 3.5rem;
+        padding: 0 1.25rem;
+      }
+
+      /* Amazon Primary Purchase Box */
+      .amazon-box {
+        background: rgba(24, 24, 27, 0.8);
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      }
+
+      .amazon-title {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+      }
+
+      .amazon-formats {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .btn-amazon {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.5rem;
+        background-color: var(--amazon-yellow);
+        color: #111111;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        border-radius: 6px;
+        box-shadow: 0 4px 14px rgba(255, 153, 0, 0.3);
+        transition: all 0.2s ease;
+        min-width: 160px;
+      }
+
+      .btn-amazon:hover {
+        background-color: var(--amazon-yellow-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 153, 0, 0.45);
+      }
+
+      .btn-amazon .format-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.85;
+      }
+
+      .btn-amazon .action-label {
+        font-size: 1.05rem;
+      }
+
+      /* Secondary Buttons Grid */
+      .cta-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+      }
+
+      @media (max-width: 768px) {
+        .cta-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .cta-grid {
+          grid-template-columns: 1fr;
+        }
+        .amazon-formats {
+          flex-direction: column;
+        }
+        .btn-amazon {
+          width: 100%;
+        }
+      }
+
+      .btn-secondary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.95rem 1.2rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 0.95rem;
+        font-weight: bold;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        border-radius: 6px;
+        background-color: var(--btn-bg);
+        color: var(--btn-text);
+        border: 1px solid var(--btn-border);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease;
+        min-height: 54px;
+      }
+
+      .btn-secondary:nth-child(1) {
+        border-color: var(--accent-red);
+        color: #ffffff;
+      }
+
+      .btn-secondary:hover {
+        background-color: #27272a;
+        border-color: var(--accent-yellow);
+        color: var(--accent-yellow);
+        box-shadow: 0 6px 20px rgba(250, 204, 21, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary:nth-child(1):hover {
+        border-color: var(--accent-red);
+        color: #ffffff;
+        background-color: var(--accent-red);
+        box-shadow: 0 6px 20px rgba(220, 38, 38, 0.35);
+      }
+
+      footer {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        border-top: 1px solid #27272a;
+        padding-top: 1.5rem;
+        width: 100%;
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="eyebrow">Official Companion &amp; Resources</div>
+      <h1>How to Ruin Your Life with Style</h1>
+      <p class="subtitle">The Art of Graceful Self-Destruction</p>
+      <p class="author">Jesús Oliván</p>
+    </header>
+
+    <div class="cover-container">
+      <div class="cover-pad">
+        <a href="sample.pdf" id="book-link" title="How to Ruin Your Life with Style" target="_blank">
+          <img src="portada_solo.png" alt="How to Ruin Your Life with Style Cover" class="book-cover">
+        </a>
+      </div>
+    </div>
+
+    <div class="action-wrapper">
+      <!-- Seccion Principal: Comprar en Amazon -->
+      <div class="amazon-box">
+        <div class="amazon-title">Buy on Amazon</div>
+        <div class="amazon-formats">
+          <a href="https://www.amazon.com/dp/TU_ASIN_KINDLE" class="btn-amazon" target="_blank">
+            <span class="action-label">Kindle Edition</span>
+            <span class="format-label">eBook</span>
+          </a>
+          <a href="https://www.amazon.com/dp/TU_ASIN_PAPERBACK" class="btn-amazon" target="_blank">
+            <span class="action-label">Paperback</span>
+            <span class="format-label">Print</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces Secundarios sin YouTube -->
+      <div class="cta-grid">
+        <a href="sample.pdf" class="btn-secondary" target="_blank">Free Sample</a>
+        <a href="recommendations.html" class="btn-secondary">Recommendations</a>
+        <a href="faq.html" class="btn-secondary">FAQ</a>
+        <a href="contact.html" class="btn-secondary">Contact</a>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 Jesús Oliván • howtoruinyourlifewithstyle.com. All rights reserved.
+    </footer>
+  </body>
+</html>

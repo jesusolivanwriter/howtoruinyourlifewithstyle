@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations - How to Ruin Your Life with Style</title>
+    <style>
+      :root {
+        --bg-color: #2b2b30;
+        --bg-gradient: radial-gradient(circle at 50% 20%, #3a3a42 0%, #222226 80%);
+
+        --text-main: #f4f4f5;
+        --text-muted: #cbd5e1;
+        --text-eyebrow: #facc15;
+
+        --accent-red: #ef4444;
+        --accent-red-hover: #dc2626;
+
+        --accent-yellow: #facc15;
+        --accent-yellow-hover: #eab308;
+
+        --card-bg: #18181b;
+        --card-border: #3f3f46;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: var(--bg-color);
+        background: var(--bg-gradient);
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 3rem 1rem;
+      }
+
+      header {
+        max-width: 650px;
+        margin-bottom: 2.5rem;
+        text-align: center;
+      }
+
+      .eyebrow {
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent-yellow);
+        margin-bottom: 0.85rem;
+        text-shadow: 0 0 12px rgba(250, 204, 21, 0.25);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+      }
+
+      p.subtitle {
+        font-size: 1.05rem;
+        color: #e4e4e7;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      .hub-container {
+        width: 100%;
+        max-width: 580px;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .hub-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        padding: 1.75rem 2rem;
+        text-align: left;
+        text-decoration: none;
+        color: var(--text-main);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        transition: all 0.2s ease;
+      }
+
+      .hub-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(250, 204, 21, 0.15);
+        border-color: var(--accent-yellow);
+      }
+
+      .hub-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: var(--accent-yellow);
+        margin-bottom: 0.5rem;
+      }
+
+      .hub-desc {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+
+      .hub-link-text {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: var(--accent-red);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      .navigation-wrapper {
+        margin-bottom: 2.5rem;
+        text-align: center;
+      }
+
+      .btn-back {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.85rem 1.85rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 0.95rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: var(--accent-red);
+        border: 1px solid var(--accent-red);
+        border-radius: 6px;
+        box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
+        transition: all 0.2s ease;
+      }
+
+      .btn-back:hover {
+        background-color: var(--accent-red-hover);
+        border-color: var(--accent-red-hover);
+        box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+        transform: translateY(-2px);
+      }
+
+      footer {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        border-top: 1px solid #27272a;
+        padding-top: 1.5rem;
+        width: 100%;
+        max-width: 580px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="eyebrow">Curated References</div>
+      <h1>Recommendations</h1>
+      <p class="subtitle">Companion readings, literary musings, and related references.</p>
+    </header>
+
+    <main class="hub-container">
+      <div class="hub-card">
+        <h2 class="hub-title">Books &amp; Influences</h2>
+        <p class="hub-desc">Literary works exploring irony, decadence, philosophy, and satire.</p>
+        <span class="hub-link-text">Coming soon</span>
+      </div>
+
+      <div class="hub-card">
+        <h2 class="hub-title">Selected Media &amp; Talks</h2>
+        <p class="hub-desc">Audio, video, and discussions complementing the themes of the book.</p>
+        <span class="hub-link-text">Coming soon</span>
+      </div>
+    </main>
+
+    <div class="navigation-wrapper">
+      <a href="index.html" class="btn-back">← Back to Home</a>
+    </div>
+
+    <footer>
+      © 2026 Jesús Oliván • howtoruinyourlifewithstyle.com. All rights reserved.
+    </footer>
+  </body>
+</html>
